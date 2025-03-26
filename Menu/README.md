@@ -39,5 +39,10 @@ Update the connection string in appsettings.json:
 Open Visual Studio and go to Tools → NuGet Package Manager → Package Manager Console
 
 Run the following commands on Package Manager Console:
+
+
 Add-Migration InitialCreate
+
+
+
 Update-Database
