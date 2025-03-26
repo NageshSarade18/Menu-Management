@@ -20,7 +20,7 @@ Database: SQL Server
 📦 Steps to Run Locally
 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/NageshSarade18/my-first-project.git
+git clone https://github.com/NageshSarade18/Menu-Management.git
 cd my-first-project
 ```
 2️⃣ Set Up Database
