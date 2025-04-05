@@ -1,0 +1,34 @@
+﻿@model List<Menu.Models.Dish>
+@{
+    ViewData["Title"] = "Menu Index";
+}
+
+<div class="container">
+    <h2 class="text-center my-4">Menu</h2>
+    <div class="row">
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var item in Model)
+            {
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow">
+                                <img src="@Url.Content(item.ImageUrl)" class="card-img-top" alt="Dish Image" style="height: 200px; object-fit: cover;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">@item.Name</h5>
+                                    <p class="card-text">Price: ₹@item.price</p> <!-- Lowercase 'price' -->
+                                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">
+                                        View Dish
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+            }
+        }
+        else
+        {
+                <div class="col-12">
+                    <p class="text-center text-danger">No dishes available.</p>
+                </div>
+        }
+    </div>
+</div>

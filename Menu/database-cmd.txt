@@ -1,0 +1,10 @@
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+docker exec -it sqlserver-container /bin/bash
+/opt/mssql-tools18/bin/sqlcmd -S localhost -U mayur -P 'Mayur@123' -C
+sqlcmd -S $containerip -U mayur -P 'Mayur@123' -d Menu_Database2 -i database.sql
+sqlcmd -S $containerip -U mayur -P 'Mayur@123'
